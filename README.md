@@ -1,3 +1,5 @@
+
+ReadMe For Ice Task 1 and 2...
 ICE Task 1 — INSY7314 Backend Setup Documentation
 1. Introduction
 This document outlines the backend implementation for ICE Task 1 of the INSY7314 module. It describes the setup of a Node.js server, integration with MongoDB Atlas, creation of a Mongoose model, and validation of functionality through testing. The implementation follows best practices for modular design, reproducibility, and academic integrity.
@@ -55,3 +57,69 @@ The public GitHub repository is available at: https://github.com/Lusanda-git/INS
 * The .env file is excluded from version control for security reasons
 * All required backend files are included and documented
 * Screenshot evidence is provided separately in the accompanying Word document
+
+
+
+
+ICE Task 2 – Fullstack Post Submission with JWT Authentication
+Overview
+This task implements a secure fullstack application that allows users to submit posts via a frontend interface. The backend is built with Node.js and Express, and integrates MongoDB for data persistence. Authentication is handled using JSON Web Tokens (JWT), ensuring that only authorized users can submit content.
+
+Technologies Used
+Backend: Node.js, Express.js, MongoDB, Mongoose
+
+Frontend: HTML, JavaScript
+
+Authentication: JWT (JSON Web Tokens)
+
+Testing Tools: curl, browser-based frontend testing
+
+Development Tools: Notepad, VS Code, Command Line Interface (CLI)
+
+Features
+Secure JWT token generation and validation
+
+POST /post/upload route for submitting posts
+
+GET /post route for retrieving posts
+
+MongoDB integration for storing and querying post data
+
+Frontend form submission with embedded JWT token
+
+Screenshot documentation for reproducibility and academic verification
+
+Setup Instructions
+Install dependencies Navigate to the ICE Task 2 directory and run:
+
+
+npm install
+Start the backend server
+
+
+node server.mjs
+Launch the frontend Open frontend/index.html in a browser.
+
+Submit a post Fill out the form and submit. The JWT token is embedded in the request header.
+
+Verify MongoDB storage Use MongoDB Compass or CLI to confirm the post was saved.
+
+Testing and Evidence
+All steps were tested using:
+
+curl for backend route verification
+
+Browser-based frontend interaction
+
+MongoDB Compass for data inspection
+
+Screenshots captured and labeled for academic documentation
+
+Notes
+The JWT token is generated using a custom Node script and securely embedded in frontend requests.
+
+All code and documentation adhere to academic integrity and reproducibility standards.
+
+The task was completed using CLI-based workflows and manual tooling to ensure transparency.
+
+Let me know if you'd like to add a submission note, author section, or license. I can also help you format this directly into your GitHub repo.
