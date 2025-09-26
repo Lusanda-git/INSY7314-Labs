@@ -15,8 +15,8 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// ✅ Auth routes
-const authRoutes = require('./routes/auth');
+// ✅ Auth routes (corrected path)
+const authRoutes = require('./routes/authRoutes');
 app.use('/api/auth', authRoutes);
 
 // ✅ Protected route
