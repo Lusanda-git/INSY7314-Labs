@@ -1,22 +1,28 @@
-import { useEffect, useState } from 'react'
-import axios from 'axios'
-import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import RegisterPage from './pages/RegisterPage';
+import LoginPage from './pages/LoginPage';
+import DashboardPage from './pages/DashboardPage';
+import LogoutPage from './pages/LogoutPage';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
-  const [data, setData] = useState(null)
-
-  useEffect(() => {
-    axios.get('http://localhost:5000/test')
-      .then(res => setData(res.data.message))
-      .catch(err => console.error(err))
-  }, [])
-
   return (
-    <>
-      <h2>Welcome to PulseVote</h2>
-      <p>{data}</p>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/logout" element={<LogoutPage />} />
+        <Route path="/dashboard" element={
+          <ProtectedRoute>
+            <DashboardPage />
+          </ProtectedRoute>
+        } />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
+ 
